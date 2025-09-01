@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: equivariant_pose_graph
+Version: 0.1.dev0
+Summary: Test classes for training self-supervised posegraphs
+Author: Brian Okorn
+
+# invariant-pose-graph
