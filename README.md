@@ -1,1 +1,1 @@
-# invariant-pose-graph
+# Placement Suggester for SPOT
