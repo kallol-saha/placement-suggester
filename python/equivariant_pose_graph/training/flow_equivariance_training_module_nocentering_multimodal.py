@@ -1063,8 +1063,8 @@ class EquivarianceTrainingModule(PointCloudTrainingModule):
                         # error_R_max, error_R_min, error_R_mean = get_degree_angle(T0.inverse().compose(
                         #     T1).compose(pred_T_action.inverse()))
 
-                        # error_t_max, error_t_min, error_t_mean = get_translation(T0.inverse().compose(
-                        #     T1).compose(pred_T_action.inverse()))
+                        error_t_max, error_t_min, error_t_mean = get_translation(T0.inverse().compose(
+                            T1).compose(pred_T_action.inverse()))
                     else:
                         error_R_mean, error_t_mean = get_2rack_errors(pred_T_action, T0, T1, mode=self.error_mode_2rack, T_aug=T_aug)
                         log_values[loss_prefix+'sample_error_R_mean'] = error_R_mean

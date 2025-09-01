@@ -493,11 +493,18 @@ class PointCloudDataset(Dataset):
                 f'Anchor point cloud is smaller than cloud size ({points_anchor.shape[1]} < {self.num_points})')
 
         # Apply transformations to action.anchor points clouds from demo
-        points_action_trans = T0.transform_points(points_action)
-        points_anchor_trans = T1.transform_points(points_anchor)
+        points_action_trans = T0.transform_points(points_action[:, :, :3])
+        points_anchor_trans = T1.transform_points(points_anchor[:, :, :3])
 
-        points_action_onetrans = T2.transform_points(points_action)
-        points_anchor_onetrans = T2.transform_points(points_anchor)
+        # TODO: add flag for this
+        points_action_trans = torch.concat([points_action_trans, points_action[:, :, 3:]], dim=-1)
+        points_anchor_trans = torch.concat([points_anchor_trans, points_anchor[:, :, 3:]], dim=-1)
+
+        points_action_onetrans = T2.transform_points(points_action[:, :, :3])
+        points_anchor_onetrans = T2.transform_points(points_anchor[:, :, :3])
+
+        points_action_onetrans = torch.concat([points_action_onetrans, points_action[:, :, 3:]], dim=-1)
+        points_anchor_onetrans = torch.concat([points_anchor_onetrans, points_anchor[:, :, 3:]], dim=-1)
             
         # if undo_demo_transform is not None:
         #     points_action_onetrans = undo_demo_transform.transform_points(points_action_onetrans)
@@ -571,7 +578,11 @@ class PointCloudDataset(Dataset):
         return data
 
     def __getitem__(self, index):
-        return self.get_data_index(index)
+        try:
+            return self.get_data_index(index)
+        except Exception as e:
+            print(f"Error encountered at index {index}: {e}. Trying next index.")
+            return self.__getitem__((index + 1) % self.dataset_size)
 
     def __len__(self):
         return self.dataset_size
