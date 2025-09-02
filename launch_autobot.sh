@@ -16,7 +16,7 @@ echo "
 SINGULARITYENV_CUDA_VISIBLE_DEVICES=$GPU_INDEX \
 singularity exec \
 --nv \
--B /home/$(whoami)/code/equivariant_pose_graph:/code/equivariant_pose_graph \
+-B /home/$(whoami)/code/placement_suggester:/code/placement_suggester \
 -B /scratch/$(whoami)/data:/data \
 -B /scratch/$(whoami)/logs:/opt/logs \
 -B /scratch/$(whoami)/artifacts:/opt/artifacts \

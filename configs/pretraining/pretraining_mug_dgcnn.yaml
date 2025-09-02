@@ -6,7 +6,7 @@ hydra:
     subdir: ${hydra.job.num}
   
 # Logging Settings
-log_dir: /home/odonca/workspace/rpad/data/equivariant_pose_graph/logs
+log_dir: /home/odonca/workspace/rpad/data/placement_suggester/logs
 experiment: pretraining
 wandb_group: mug_test
 image_logging_period: 1000

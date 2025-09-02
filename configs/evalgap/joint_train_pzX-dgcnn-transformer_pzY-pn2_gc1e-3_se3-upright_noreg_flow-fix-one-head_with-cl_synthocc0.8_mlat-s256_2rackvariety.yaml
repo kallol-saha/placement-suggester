@@ -6,8 +6,8 @@ hydra:
     dir: ${log_dir}/${experiment}/sweep/${now:%Y-%m-%d_%H%M%S}
     subdir: ${hydra.job.num}
 
-log_dir: /home/odonca/workspace/rpad/data/equivariant_pose_graph/logs
-# log_dir: /media/jenny/cubbins-archive/jwang_datasets/home_backup/jwang/code/equivariant_pose_graph/logs 
+log_dir: /home/odonca/workspace/rpad/data/placement_suggester/logs
+# log_dir: /media/jenny/cubbins-archive/jwang_datasets/home_backup/jwang/code/placement_suggester/logs 
 experiment: residual_flow_occlusion
 wandb_group: icra2024
 
@@ -24,8 +24,8 @@ plot_encoder_distribution: True
 
 
 # mug on 1 rack- use cloud_type=teleport
-dataset_root: /home/odonca/workspace/rpad/data/equivariant_pose_graph/data/mug_place/train_data/renders
-test_dataset_root: /home/odonca/workspace/rpad/data/equivariant_pose_graph/data/mug_place/test_data/renders
+dataset_root: /home/odonca/workspace/rpad/data/placement_suggester/data/mug_place/train_data/renders
+test_dataset_root: /home/odonca/workspace/rpad/data/placement_suggester/data/mug_place/test_data/renders
 
 num_points: 1024
 distractor_anchor_aug: True
@@ -238,8 +238,8 @@ discriminator_loss_weight: 1 # Weight for the discriminator during p(z|X) advers
 
 # Training Settings
 
-# checkpoint_file: #/home/jenny/data/equivariant_pose_graph/logs/residual_flow_occlusion/2023-08-25_164441/residual_flow_occlusion/wia2jdcr/checkpoints/epoch_999_global_step_125000.ckpt # /home/jenny/data/equivariant_pose_graph/logs/residual_flow_occlusion/2023-09-21_012835/residual_flow_occlusion/0gxxuz4a/checkpoints/epoch=552-step=69125.ckpt
-checkpoint_file: null # /home/odonca/workspace/rpad/data/equivariant_pose_graph/logs/taxposed_rpdiff_mug-rack-multi/2024-01-27_005908/taxposed_rpdiff_mug-rack-multi/r94bfcqk/checkpoints/epoch_7960_global_step_995000.ckpt
+# checkpoint_file: #/home/jenny/data/placement_suggester/logs/residual_flow_occlusion/2023-08-25_164441/residual_flow_occlusion/wia2jdcr/checkpoints/epoch_999_global_step_125000.ckpt # /home/jenny/data/placement_suggester/logs/residual_flow_occlusion/2023-09-21_012835/residual_flow_occlusion/0gxxuz4a/checkpoints/epoch=552-step=69125.ckpt
+checkpoint_file: null # /home/odonca/workspace/rpad/data/placement_suggester/logs/taxposed_rpdiff_mug-rack-multi/2024-01-27_005908/taxposed_rpdiff_mug-rack-multi/r94bfcqk/checkpoints/epoch_7960_global_step_995000.ckpt
 resume_id: null
 
 checkpoint_file_action: #/media/jenny/cubbins-archive/jwang_datasets/home_backup/jwang/code/taxpose/trained_models/pretraining_mug_embnn_weights.ckpt #trained_models/pretraining_mug_embnn_weights.ckpt

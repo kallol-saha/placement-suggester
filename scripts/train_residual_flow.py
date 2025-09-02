@@ -1,15 +1,15 @@
-from equivariant_pose_graph.training.flow_equivariance_training_module_nocentering import EquivarianceTrainingModule
-from equivariant_pose_graph.dataset.point_cloud_data_module import MultiviewDataModule
-from equivariant_pose_graph.models.transformer_flow import ResidualFlow_DiffEmbTransformer
+from placement_suggester.training.flow_equivariance_training_module_nocentering import EquivarianceTrainingModule
+from placement_suggester.dataset.point_cloud_data_module import MultiviewDataModule
+from placement_suggester.models.transformer_flow import ResidualFlow_DiffEmbTransformer
 import os
 import torch
 
 import numpy as np
 import pytorch_lightning as pl
 
-from equivariant_pose_graph.dataset.point_cloud_data_module import MultiviewDataModule
+from placement_suggester.dataset.point_cloud_data_module import MultiviewDataModule
 import hydra
-from equivariant_pose_graph.utils.callbacks import SaverCallbackModel, SaverCallbackEmbnnActionAnchor
+from placement_suggester.utils.callbacks import SaverCallbackModel, SaverCallbackEmbnnActionAnchor
 from pytorch_lightning.loggers import WandbLogger
 # chuerp conda env: pytorch3d_38
 

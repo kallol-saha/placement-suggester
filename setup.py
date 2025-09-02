@@ -4,7 +4,7 @@ from distutils.core import setup
 from setuptools import find_packages
 
 setup(
-    name='equivariant_pose_graph',
+    name='placement_suggester',
     version='0.1dev',
     author='Brian Okorn',
     packages=find_packages('python'),

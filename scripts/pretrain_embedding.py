@@ -1,13 +1,13 @@
-from equivariant_pose_graph.training.equivariant_feature_pretraining_module import EquivariancePreTrainingModule
-from equivariant_pose_graph.dataset.pretraining_point_cloud_data_module import PretrainingMultiviewDataModule
-from equivariant_pose_graph.models.pretraining import EquivariantFeatureEmbeddingNetwork
-# from equivariant_pose_graph.models.transformer_flow import EquivariantFeatureEmbeddingNetwork
+from placement_suggester.training.equivariant_feature_pretraining_module import EquivariancePreTrainingModule
+from placement_suggester.dataset.pretraining_point_cloud_data_module import PretrainingMultiviewDataModule
+from placement_suggester.models.pretraining import EquivariantFeatureEmbeddingNetwork
+# from placement_suggester.models.transformer_flow import EquivariantFeatureEmbeddingNetwork
 import os
 import torch
 import pytorch_lightning as pl
 from pytorch_lightning.loggers import WandbLogger
 import hydra
-from equivariant_pose_graph.utils.callbacks import SaverCallbackEmbnn
+from placement_suggester.utils.callbacks import SaverCallbackEmbnn
 # chuerp conda env: pytorch3d_38
 
 

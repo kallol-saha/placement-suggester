@@ -32,8 +32,8 @@ RUN pip install https://github.com/unlimblue/KNN_CUDA/releases/download/0.2/KNN_
 RUN pip install "numpy==1.23"
 
 WORKDIR /code
-RUN mkdir equivariant_pose_graph
-WORKDIR /code/equivariant_pose_graph
+RUN mkdir placement_suggester
+WORKDIR /code/placement_suggester
 
 COPY configs/ ./configs/
 COPY python/ ./python/

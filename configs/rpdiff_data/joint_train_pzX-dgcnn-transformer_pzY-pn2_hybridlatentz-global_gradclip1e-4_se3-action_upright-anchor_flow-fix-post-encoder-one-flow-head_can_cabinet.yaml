@@ -6,8 +6,8 @@ hydra:
     dir: ${log_dir}/${experiment}/sweep/${now:%Y-%m-%d_%H%M%S}
     subdir: ${hydra.job.num}
 
-log_dir: /home/odonca/workspace/rpad/data/equivariant_pose_graph/logs
-# log_dir: /media/jenny/cubbins-archive/jwang_datasets/home_backup/jwang/code/equivariant_pose_graph/logs 
+log_dir: /home/odonca/workspace/rpad/data/placement_suggester/logs
+# log_dir: /media/jenny/cubbins-archive/jwang_datasets/home_backup/jwang/code/placement_suggester/logs 
 experiment: taxposed_rpdiff_can-cabinet
 wandb_group: can-cabinet
 

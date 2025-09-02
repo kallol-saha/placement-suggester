@@ -15,7 +15,7 @@ import matplotlib as mpl
 import matplotlib.pyplot as plt
 from mpl_toolkits import mplot3d
 
-from equivariant_pose_graph.utils.env_mod_utils import get_random_rack_demo
+from placement_suggester.utils.env_mod_utils import get_random_rack_demo
 
 import glob
 import tqdm
@@ -27,10 +27,10 @@ GRIPPER_CLASS = 2
 def main(cfg):
     defaults = {
         'train_default': {
-            'dataset_root': "/media/jenny/cubbins-archive/jwang_datasets/home_backup/jwang/code/equivariant_pose_graph/data/train_data/renders",
+            'dataset_root': "/media/jenny/cubbins-archive/jwang_datasets/home_backup/jwang/code/placement_suggester/data/train_data/renders",
         },
         'test_default': {
-            'dataset_root': "/media/jenny/cubbins-archive/jwang_datasets/home_backup/jwang/code/equivariant_pose_graph/data/test_data/renders",
+            'dataset_root': "/media/jenny/cubbins-archive/jwang_datasets/home_backup/jwang/code/placement_suggester/data/test_data/renders",
         }
     }
 

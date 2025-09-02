@@ -6,8 +6,8 @@ hydra:
     dir: ${log_dir}/${experiment}/sweep/${now:%Y-%m-%d_%H%M%S}
     subdir: ${hydra.job.num}
 
-log_dir: /home/odonca/workspace/rpad/data/equivariant_pose_graph/logs
-# log_dir: /media/jenny/cubbins-archive/jwang_datasets/home_backup/jwang/code/equivariant_pose_graph/logs 
+log_dir: /home/odonca/workspace/rpad/data/placement_suggester/logs
+# log_dir: /media/jenny/cubbins-archive/jwang_datasets/home_backup/jwang/code/placement_suggester/logs 
 experiment: residual_flow_occlusion
 wandb_group: icra2024
 
@@ -24,8 +24,8 @@ plot_encoder_distribution: True
 
 
 # mug on 1 rack- use cloud_type=teleport
-dataset_root: /home/odonca/workspace/rpad/data/equivariant_pose_graph/data/mug_place/train_data/renders
-test_dataset_root: /home/odonca/workspace/rpad/data/equivariant_pose_graph/data/mug_place/test_data/renders
+dataset_root: /home/odonca/workspace/rpad/data/placement_suggester/data/mug_place/train_data/renders
+test_dataset_root: /home/odonca/workspace/rpad/data/placement_suggester/data/mug_place/test_data/renders
 
 num_points: 1024
 distractor_anchor_aug: True

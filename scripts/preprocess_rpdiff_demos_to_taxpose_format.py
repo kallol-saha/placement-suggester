@@ -15,13 +15,13 @@ import matplotlib as mpl
 import matplotlib.pyplot as plt
 from mpl_toolkits import mplot3d
 
-from equivariant_pose_graph.utils.env_mod_utils import get_random_rack_demo
+from placement_suggester.utils.env_mod_utils import get_random_rack_demo
 
 import glob
 import tqdm
 
 
-from equivariant_pose_graph.dataset.rpdiff_data_module import RpDiffDataModule
+from placement_suggester.dataset.rpdiff_data_module import RpDiffDataModule
 
 def main(cfg):
     print()
@@ -82,7 +82,7 @@ if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser(description='Data augmentation.')
     parser.add_argument('--data_folder', type=str, 
-                        default="/home/jenny/code/equivariant_pose_graph/data",
+                        default="/home/jenny/code/placement_suggester/data",
                         help='Folder containing all datasets')
     parser.add_argument('--rpdiff_obj_config', type=str,
                         default="mug-rack-multi",

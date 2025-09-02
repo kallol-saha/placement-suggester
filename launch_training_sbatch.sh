@@ -48,22 +48,22 @@ COMMANDS=(
 # Run the Singularity container
 time \
 	singularity exec --nv \
-	-B /home/jennyw2/code/taxpose/data/mug_place/:/code/equivariant_pose_graph/data \
-	-B /home/jennyw2/code/equivariant_pose_graph/logs:/code/equivariant_pose_graph/logs \
+	-B /home/jennyw2/code/taxpose/data/mug_place/:/code/placement_suggester/data \
+	-B /home/jennyw2/code/placement_suggester/logs:/code/placement_suggester/logs \
 	$SINGULARITY_IMAGE \
 	bash -c "source activate taxposed && \
 		${COMMANDS[$SLURM_ARRAY_TASK_ID - 1]} \
-		dataset_root=/code/equivariant_pose_graph/data/train_data/renders \
-		test_dataset_root=/code/equivariant_pose_graph/data/test_data/renders \
-		log_dir=/code/equivariant_pose_graph/logs"
+		dataset_root=/code/placement_suggester/data/train_data/renders \
+		test_dataset_root=/code/placement_suggester/data/test_data/renders \
+		log_dir=/code/placement_suggester/logs"
 
 #               CUDA_VISIBLE_DEVICES=0 \
 
 # singularity exec \
-# 	-B /home/$(whoami)/code/equivariant_pose_graph:/opt/$(whoami)/code \
+# 	-B /home/$(whoami)/code/placement_suggester:/opt/$(whoami)/code \
 # 	-B /scratch/$(whoami)/logs:/opt/logs \
 # 	$SINGULARITY_IMAGE $COMMAND_TO_RUN
 # 	# -B /scratch/$(whoami)/data:/data \
 # 	# -B /scratch/$(whoami)/artifacts:/opt/artifacts \
-# 	# --bind /home/jenny/code/equivariant_pose_graph/data:/home/jenny/code/equivariant_pose_graph/data \
+# 	# --bind /home/jenny/code/placement_suggester/data:/home/jenny/code/placement_suggester/data \
 	

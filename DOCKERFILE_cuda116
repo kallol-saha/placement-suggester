@@ -24,8 +24,8 @@ RUN pip install dglgo -f https://data.dgl.ai/wheels-test/repo.html
 RUN mkdir /code
 WORKDIR /code
 
-RUN mkdir equivariant_pose_graph
-WORKDIR /code/equivariant_pose_graph
+RUN mkdir placement_suggester
+WORKDIR /code/placement_suggester
 
 COPY configs/ ./configs/
 COPY python/ ./python/
