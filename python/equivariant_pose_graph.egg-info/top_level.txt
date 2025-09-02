@@ -1,1 +1,0 @@
-equivariant_pose_graph
