@@ -17,7 +17,7 @@ from placement_suggester.models.vn_dgcnn import VN_DGCNN, VNArgs
 from placement_suggester.models.pointnet2 import PointNet2SSG, PointNet2MSG
 from placement_suggester.models.pointnet2pyg import PN2DenseWrapper, PN2DenseParams, PN2EncoderWrapper, PN2EncoderParams, PN2HybridWrapper
 
-from vtamp.utils.pcd_utils import plot_latent_space             # !!! This is for debug visualizations only
+# from vtamp.utils.pcd_utils import plot_latent_space             # !!! This is for debug visualizations only
 
 # Part of the code is referred from: http://nlp.seas.harvard.edu/2018/04/03/attention.html#positional-encoding
 
